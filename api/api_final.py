@@ -23,7 +23,7 @@ def home():
 
 @app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
-    conn = sqlite3.connect('books_sqlite3.db')
+    conn = sqlite3.connect('books.db')
     conn.row_factory = dict_factory
     cur = conn.cursor()
     all_books = cur.execute('SELECT * FROM books;').fetchall()
@@ -61,7 +61,7 @@ def api_filter():
 
     query = query[:-4] + ';'
 
-    conn = sqlite3.connect('books_sqlite3.db')
+    conn = sqlite3.connect('books.db')
     conn.row_factory = dict_factory
     cur = conn.cursor()
 
