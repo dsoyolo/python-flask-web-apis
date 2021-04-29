@@ -61,7 +61,7 @@ def api_filter():
 
     query = query[:-4] + ';'
 
-    conn = sqlite3.connect('books.db')
+    conn = sqlite3.connect('books_sqlite3.db')
     conn.row_factory = dict_factory
     cur = conn.cursor()
 
