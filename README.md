@@ -22,6 +22,3 @@ When using semgrep, run:
 ```bash
 semgrep --config s/ubimars:flask-debug-enabled --sarif api/api_final.py | python3.9 -m json.tool > output/sarif-output.json
 ```
-
-
-
